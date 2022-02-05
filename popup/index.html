@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>popup</title>
+    <style>
+        .popup {
+            width: 400px;
+            height: 200px;
+            background: rgba(165, 126, 102, 0.5);
+            position: absolute;
+            top: -1000px;
+        }
+
+        .show-popup {
+            position: fixed;
+            top: 400px;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+
+<button id="showPop">pop</button>
+<div class="popup"></div>
+
+
+<script>
+
+    let showPop = document.getElementById('showPop');
+
+    showPop.onclick = function () {
+        document.getElementsByClassName('popup')[0].classList.toggle('show-popup');
+    }
+
+
+</script>
+</body>
+</html>
